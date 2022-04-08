@@ -9,10 +9,8 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
-try:
-    browser.get("www.google.com")
-    print((browser.title))
-    sys.stdout.flush()
-finally:
-    browser.quit()
+browser.get("https://www.google.com")
+print((browser.title))
+sys.stdout.flush()
+browser.quit()
     
