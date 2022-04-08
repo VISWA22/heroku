@@ -14,3 +14,4 @@ try:
     sys.stdout.flush()
 finally:
     browser.quit()
+    
