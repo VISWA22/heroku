@@ -1,1 +1,2 @@
+heroku buildpacks:set heroku/python
 python-3.10.4
