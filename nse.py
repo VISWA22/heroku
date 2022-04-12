@@ -16,6 +16,6 @@ chrome_options.add_argument('--user-agent={0}'.format(user_agent))
 browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 browser.get("https://www.nseindia.com/api/equity-stockIndices?index=SECURITIES%20IN%20F&O")
 time.sleep(3)
-driver.find_element(By.LINK_TEXT,"Download (.csv)").click()
+browser.find_element(By.LINK_TEXT,"Download (.csv)").click()
 browser.quit()
     
