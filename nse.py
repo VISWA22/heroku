@@ -14,8 +14,10 @@ chrome_options.add_argument("--no-sandbox")
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36 Edg/100.0.1185.36'
 chrome_options.add_argument('--user-agent={0}'.format(user_agent))
 browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
-browser.get("https://www.nseindia.com/api/equity-stockIndices?index=SECURITIES%20IN%20F%26O")
+browser.get("https://files-go.en.uptodown.com/android/download")
 time.sleep(3)
-browser.find_element(By.LINK_TEXT,"Download (.csv)").click()
+button = browser.find_element_by_id("detail-download-button")
+button.click()
+time.sleep(100)
 browser.quit()
     
