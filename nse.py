@@ -16,6 +16,8 @@ chrome_options.add_argument('--user-agent={0}'.format(user_agent))
 browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 browser.get("https://www.browserstack.com/test-on-the-right-mobile-devices")
 time.sleep(3)
+gotit= driver.find_element_by_id('accept-cookie-notification');
+gotit.click();
 button = browser.find_element_by_css_selector('.icon-csv')
 button.click()
 time.sleep(10)
